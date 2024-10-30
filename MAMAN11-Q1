@@ -1,0 +1,40 @@
+import java.util.Scanner;
+/**
+ * MAMAN 11, FIRST QUESTION.
+ * This program takes from the user coordinates for 3 points,
+ * and calculates which 2 points has the larger distance, and print the 2 points.
+ * @author Koren Levy
+ * @version 30/10/2024
+ */
+
+public class MaxLine
+{
+   public static void main(String[] args)
+   {
+       // We get from the user input for the coordiantes.
+       Scanner scan = new Scanner(System.in);
+       System.out.println("Enter first point coordinates:");
+       int x1 = scan.nextInt();
+       int y1 = scan.nextInt();
+       System.out.println("Enter second point coordinates:");
+       int x2 = scan.nextInt();
+       int y2 = scan.nextInt();
+       System.out.println("Enter third point coordinates:");
+       int x3 = scan.nextInt();
+       int y3 = scan.nextInt();
+       
+       // We calculate the distance between 2 points using the distance formula.
+       double distance12 = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2)); // Distance between points 1 and 2
+       double distance13 = Math.sqrt(Math.pow(x1 - x3, 2) + Math.pow(y1 - y3, 2)); // Distance between points 1 and 3
+       double distance23 = Math.sqrt(Math.pow(x2 - x3, 2) + Math.pow(y2 - y3, 2)); // Distance between points 2 and 3
+       
+       if(distance12 >= distance13 && distance12 >= distance23) // If distance12 is the biggest.
+              System.out.println("Max line created by the following points: (" +x1 +"," + y1 +") ("+ x2 +","+ y2+")");
+              
+       else if(distance13 >= distance12 && distance12 >= distance23) // Else if distance13 is the biggest.
+              System.out.println("Max line created by the following points: (" +x1 +"," + y1 +") ("+ x3 +","+ y3+")");
+              
+       else // distance23 is the biggest.
+              System.out.println("Max line created by the following points: (" +x2 +"," + y2 +") ("+ x3 +","+ y3+")"); 
+   }
+}
