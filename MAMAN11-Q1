@@ -31,10 +31,10 @@ public class MaxLine
        if(distance12 >= distance13 && distance12 >= distance23) // If distance12 is the biggest.
               System.out.println("Max line created by the following points: (" +x1 +"," + y1 +") ("+ x2 +","+ y2+")");
               
-       else if(distance13 >= distance12 && distance12 >= distance23) // Else if distance13 is the biggest.
-              System.out.println("Max line created by the following points: (" +x1 +"," + y1 +") ("+ x3 +","+ y3+")");
+       else if(distance23 >= distance12 && distance23 >= distance13) // Else if distance23 is the biggest.
+              System.out.println("Max line created by the following points: (" +x2 +"," + y2 +") ("+ x3 +","+ y3+")");
               
-       else // distance23 is the biggest.
-              System.out.println("Max line created by the following points: (" +x2 +"," + y2 +") ("+ x3 +","+ y3+")"); 
+       else // distance13 is the biggest.
+              System.out.println("Max line created by the following points: (" +x1 +"," + y1 +") ("+ x3 +","+ y3+")"); 
    }
 }
